@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Home: View {
+struct Tracker: View {
     
     /*
      TO DO:
@@ -138,6 +138,6 @@ struct Home: View {
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        Tracker()
     }
 }
