@@ -50,7 +50,7 @@ struct CustomTextField: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 10)
-        .background(Color("starkWhite").opacity(value != "" ? 1 : 0))
+        .background(Color("orange").opacity(value != "" ? 0.2 : 0))
         .cornerRadius(8)
         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 5, y: 5)
         .shadow(color: Color.black.opacity(0.05), radius: 5, x: -5, y: -5)

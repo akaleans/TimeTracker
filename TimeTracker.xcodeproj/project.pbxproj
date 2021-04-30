@@ -16,6 +16,7 @@
 		C51B9D56262E03B6001831E5 /* TimeTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51B9D55262E03B6001831E5 /* TimeTrackerTests.swift */; };
 		C51B9D61262E03B6001831E5 /* TimeTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51B9D60262E03B6001831E5 /* TimeTrackerUITests.swift */; };
 		C51B9D72262E1974001831E5 /* HomeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51B9D71262E1974001831E5 /* HomeImage.swift */; };
+		C54D2468263B2CC400EB3EE3 /* AddProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D2467263B2CC400EB3EE3 /* AddProject.swift */; };
 		C5924D8C2630F11A00AD7D2D /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5924D8B2630F11A00AD7D2D /* Schedule.swift */; };
 		C5B406C42631316A008B774F /* database.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B406C32631316A008B774F /* database.swift */; };
 		C5E66B8B263A49A000651AF4 /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E66B8A263A49A000651AF4 /* Projects.swift */; };
@@ -62,6 +63,7 @@
 		C51B9D60262E03B6001831E5 /* TimeTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerUITests.swift; sourceTree = "<group>"; };
 		C51B9D62262E03B6001831E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C51B9D71262E1974001831E5 /* HomeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImage.swift; sourceTree = "<group>"; };
+		C54D2467263B2CC400EB3EE3 /* AddProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProject.swift; sourceTree = "<group>"; };
 		C5924D8B2630F11A00AD7D2D /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		C5B406C32631316A008B774F /* database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = database.swift; sourceTree = "<group>"; };
 		C5E66B8A263A49A000651AF4 /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				C5E69595262F93A0001E35CF /* Tracker.swift */,
 				C5924D8B2630F11A00AD7D2D /* Schedule.swift */,
 				C5E66B9B263A74F100651AF4 /* ProjectRow.swift */,
+				C54D2467263B2CC400EB3EE3 /* AddProject.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				C51B9D3F262E03AE001831E5 /* AppDelegate.swift in Sources */,
 				C5E6958C262F845E001E35CF /* Login.swift in Sources */,
 				C5E69591262F85EE001E35CF /* CustomTextField.swift in Sources */,
+				C54D2468263B2CC400EB3EE3 /* AddProject.swift in Sources */,
 				C51B9D41262E03AE001831E5 /* SceneDelegate.swift in Sources */,
 				C51B9D72262E1974001831E5 /* HomeImage.swift in Sources */,
 				C5E66B9C263A74F100651AF4 /* ProjectRow.swift in Sources */,

@@ -57,17 +57,68 @@ func getProjects() -> [ProjectItem] {
     let pid = Expression<Int64>("id")
     let name = Expression<String>("name")
     let description = Expression<String>("description")
-    let hours = Expression<Double>("hours")
+    let hours = Expression<Double?>("hours")
     
     var list = [ProjectItem]()
     do{
         for item in try! db.prepare(projects) {
-            list.append(ProjectItem(id: Int(item[pid]), name: item[name], description: item[description], hours: item[hours]))
+            list.append(ProjectItem(id: Int(item[pid]), name: item[name], description: item[description], hours: item[hours] ?? 0.0))
         }
     }
     return list
 }
 
-/*
- copy from server
- */
+func addProject(in_name: String, in_description: String, in_hours: Double){
+    let db = try! Connection("Users/khalenstensby/Desktop/timetracker/TimeTracker/db.sqlite3")
+    
+    let projects = Table("projects")
+    let name = Expression<String>("name")
+    let description = Expression<String>("description")
+    let hours = Expression<Double>("hours")
+    
+    do {
+        try db.run(projects.insert(name <- in_name, description <- in_description, hours <- in_hours))
+    } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
+        print("Constraint failed: \(message), in \(String(describing: statement))")
+    } catch let error {
+        print("Insertion failed: \(error)")
+    }
+}
+
+func deleteProject(in_pid: Int){
+    let db = try! Connection("Users/khalenstensby/Desktop/timetracker/TimeTracker/db.sqlite3")
+    
+    let projects = Table("projects")
+    let id = Expression<Int64>("id")
+
+    let row = projects.filter(id == Int64(in_pid))
+    do{
+        if try db.run(row.delete()) > 0{
+            print("Deleted row")
+        } else {
+            print("Row not found")
+        }
+    } catch {
+        print("Delete failed: \(error)")
+    }
+}
+
+func updateHours(in_pid: Int, in_hours: Double){
+    let db = try! Connection("Users/khalenstensby/Desktop/timetracker/TimeTracker/db.sqlite3")
+    
+    let projects = Table("projects")
+    let id = Expression<Int64>("id")
+    let hours = Expression<Double>("hours")
+    
+    let row = projects.filter(id == Int64(in_pid))
+    do{
+        if try db.run(row.update(hours += in_hours)) > 0{
+            print("Updated row")
+        } else {
+            print("Row not found")
+        }
+    } catch {
+        print("Update failed: \(error)")
+    }
+}
+

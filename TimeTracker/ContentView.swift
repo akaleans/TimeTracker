@@ -9,14 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var currentProject : ProjectItem.ID = -1
+    @State var currentProjectName : String = ""
+    
     var body : some View {
-        Projects()
+        if currentProject == -1{
+            Projects(currentProject: $currentProject, currentProjectName: $currentProjectName)
+        }
+        else if currentProject == -2{
+            AddProject(currentProject: $currentProject)
+        }
+        else {
+            Tracker(currentProject: $currentProject, currentProjectName: $currentProjectName)
+        }
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
