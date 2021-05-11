@@ -1,2 +1,0 @@
-# TimeTracker
-iOS TimeTracker App
